@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World's Best Sister Isha ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #18002e, #690044, #ff4b87);
+    color: white;
+    text-align: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 420px;
+    padding: 35px 20px;
+    border: 1px solid #ffffff55;
+    border-radius: 28px;
+    background: #ffffff12;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 35px #ff69b455;
+    animation: appear 2s ease;
+    z-index: 2;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: scale(.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    font-size: 27px;
+    color: #ffd6eb;
+    text-shadow: 0 0 15px #ff69b4;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin: 15px 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4b87; }
+    to { text-shadow: 0 0 30px #fff, 0 0 45px #ff1493; }
+}
+
+.heart {
+    font-size: 65px;
+    margin: 15px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.25); }
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4b87;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff4b87;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+.floating {
+    position: absolute;
+    bottom: -40px;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🌸 World's Best Sister 🌸</h1>
+
+    <div class="heart">💖</div>
+
+    <div class="name">ISHA</div>
+
+    <p>
+        Dear Isha ❤️<br>
+        You are not just my sister,<br>
+        you are my happiness,<br>
+        my strength and my forever friend. 🫶
+    </p>
+
+    <p>Love you forever, Sister! 💕</p>
+
+    <button onclick="showLove()">
+        Click for a Surprise 💝
+    </button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating";
+
+    const symbols = ["💖", "💕", "💗", "🌸", "✨", "💝"];
+    heart.innerHTML = symbols[
+        Math.floor(Math.random() * symbols.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 9000);
+}
+
+setInterval(createHeart, 300);
+
+function showLove() {
+    document.getElementById("message").innerHTML =
+        "🥹❤️ Isha, you are the BEST SISTER IN THE WORLD! 👑💖";
+}
+</script>
+
+</body>
+</html>
